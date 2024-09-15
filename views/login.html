@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Define a visualização para a largura da tela do dispositivo e escala inicial -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página exibido na aba do navegador -->
+    <title>Tela de Login</title>
+    <!-- Vincula o arquivo de estilos CSS externo para estilização da página -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Bloco principal da página -->
+    <main>
+        <!-- Cabeçalho da página -->
+        <header>
+            <h1>Login</h1>
+        </header>
+        
+        <!-- Formulário de login -->
+        <form action="/register" method="POST">
+            <!-- Bloco para o campo de entrada do usuário -->
+            <div class="email_box">
+                <!-- Rótulo para o campo de entrada do usuário -->
+                <label for="user">Usuário</label>
+                <!-- Campo de entrada para o nome de usuário -->
+                <input type="text" id="user" name="user" class="input_field" placeholder="usuário" autocomplete="off" required>
+                <!-- Mensagem de erro exibida quando o campo de entrada está vazio -->
+                <span class="error-message">Por favor, preencha este campo.</span>
+            </div>
+            
+            <!-- Bloco para o campo de entrada da senha -->
+            <div class="password_box">
+                <!-- Rótulo para o campo de entrada da senha -->
+                <label for="pass">Senha</label>
+                <!-- Campo de entrada para a senha -->
+                <input type="password" id="pass" name="pass" class="input_field" placeholder="senha" autocomplete="off" required>
+                <!-- Mensagem de erro exibida quando o campo de entrada está vazio -->
+                <span class="error-message">Por favor, preencha este campo.</span>
+            </div>
+
+            <!-- Bloco para opções adicionais, como lembrar-me -->
+            <div class="forgot">
+                <section>
+                    <!-- Caixa de seleção para "Lembrar-me" -->
+                    <input type="checkbox" id="check" name="rememberMe">
+                    <!-- Rótulo para a caixa de seleção -->
+                    <label for="check">Manter-me logado</label>
+                </section>
+            </div>
+
+            <!-- Bloco para o botão de envio do formulário -->
+            <div class="submit-button">
+                <!-- Botão de envio com o texto "login" -->
+                <input type="submit" value="login" class="submit">
+            </div>
+        </form>
+
+        <!-- Rodapé da página -->
+        <footer>
+            <!-- Texto de rodapé com créditos de desenvolvimento -->
+            <p>Desenvolvido por Kauan da Silveira, Laura Pires e Wellington Moura</p>
+        </footer>
+    </main>
+
+    <!-- Vincula um arquivo JavaScript externo para funcionalidades adicionais -->
+    <script src="/js/modal.js"></script>
+</body>
+</html>

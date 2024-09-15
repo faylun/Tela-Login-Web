@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+/* Variáveis de cores e fontes */
+:root {
+    --font-color: #F5F5F5; /* Cor do texto principal */
+    --background-color: #121212; /* Cor de fundo da página */
+    --main-bg-color: #1E1E1E; /* Cor de fundo principal do conteúdo */
+    --border-color: #F5F5F5; /* Cor da borda dos campos de entrada */
+    --focus-border-color: #FFFFFF; /* Cor da borda dos campos de entrada ao focar */
+    --submit-bg-color: #490b75; /* Cor de fundo do botão de envio */
+    --submit-hover-bg-color: #7c10c9; /* Cor de fundo do botão ao passar o mouse */
+    --link-color: #b4b4b4; /* Cor dos links */
+    --footer-font-size: 11px; /* Tamanho da fonte do rodapé */
+    --header-font-color: #F5F5F5; /* Cor do texto do cabeçalho */
+    --default-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Fonte padrão */
+}
+
+/* Reset de margens, preenchimentos e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    background-color: var(--background-color); /* Cor de fundo */
+    font-family: var(--default-font); /* Fonte padrão */
+    height: 100vh; /* Altura da página igual à altura da janela de visualização */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    align-items: center; /* Alinha verticalmente no centro */
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Estilo do bloco principal do conteúdo */
+main {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Alinha verticalmente no centro */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    background-color: var(--main-bg-color); /* Cor de fundo */
+    padding: 40px; /* Preenchimento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra ao redor */
+    width: 90%; /* Largura relativa à largura da tela */
+    max-width: 500px; /* Largura máxima */
+}
+
+/* Estilo do cabeçalho */
+header {
+    color: var(--header-font-color); /* Cor do texto */
+    margin-bottom: 35px; /* Espaçamento abaixo do cabeçalho */
+    text-decoration: underline; /* Sublinhado no texto */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* Estilo do formulário */
+form {
+    display: flex; /* Usa flexbox para organizar o formulário */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Alinha horizontalmente no centro */
+    width: 100%; /* Largura total do contêiner */
+}
+
+/* Estilo dos blocos de entrada de email e senha */
+.email_box, .password_box {
+    display: flex; /* Usa flexbox para organizar os rótulos e campos de entrada */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    padding: 10px; /* Preenchimento interno */
+    width: 100%; /* Largura total do contêiner */
+}
+
+/* Estilo dos rótulos dentro dos blocos de entrada */
+.email_box label, .password_box label {
+    padding: 5px; /* Preenchimento interno */
+    color: var(--font-color); /* Cor do texto */
+}
+
+/* Estilo dos campos de entrada */
+.input_field {
+    margin-top: 10px; /* Espaçamento acima do campo */
+    padding: 0 5px; /* Preenchimento horizontal */
+    background-color: transparent; /* Cor de fundo transparente */
+    border: none; /* Sem borda padrão */
+    border-bottom: 1px solid var(--border-color); /* Borda inferior */
+    outline: none; /* Remove o contorno padrão do navegador */
+    width: 100%; /* Largura total do contêiner */
+    height: 30px; /* Altura do campo */
+    font-size: 16px; /* Tamanho da fonte */
+    color: var(--font-color); /* Cor do texto */
+}
+
+/* Estilo para quando o campo de entrada está focado */
+.input_field:focus {
+    border-bottom: 1px solid var(--focus-border-color); /* Cor da borda ao focar */
+}
+
+/* Estilo da seção de opções esquecidas */
+.forgot {
+    display: flex; /* Usa flexbox para organizar a seção */
+    justify-content: space-between; /* Espaça os elementos horizontalmente */
+    width: 100%; /* Largura total do contêiner */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+/* Estilo das seções dentro da seção "forgot" */
+.forgot section {
+    display: flex; /* Usa flexbox para organizar os elementos */
+    align-items: center; /* Alinha verticalmente no centro */
+    font-size: 13px; /* Tamanho da fonte */
+}
+
+/* Estilo do rótulo dentro da seção "forgot" */
+.forgot section label {
+    color: var(--link-color); /* Cor do texto */
+    margin-left: 5px; /* Espaçamento à esquerda do rótulo */
+}
+
+/* Estilo do botão de envio */
+.submit-button {
+    width: 100%; /* Largura total do contêiner */
+    margin-top: 20px; /* Espaçamento acima do botão */
+}
+
+/* Estilo do botão de envio do formulário */
+.submit {
+    width: 100%; /* Largura total do botão */
+    padding: 10px; /* Preenchimento interno */
+    background-color: var(--submit-bg-color); /* Cor de fundo */
+    border: none; /* Sem borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: var(--font-color); /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* Estilo do botão de envio ao passar o mouse */
+.submit:hover {
+    background-color: var(--submit-hover-bg-color); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para campos inválidos */
+.input_field:invalid {
+    border-color: red; /* Cor da borda */
+}
+
+/* Estilo para campos válidos */
+.input_field:valid {
+    border-color: green; /* Cor da borda */
+}
+
+/* Estilo das mensagens de erro */
+.error-message {
+    color: red; /* Cor do texto */
+    font-size: 12px; /* Tamanho da fonte */
+    margin-top: 5px; /* Espaçamento acima da mensagem */
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilo para mostrar a mensagem de erro quando o campo é inválido */
+.input_field:invalid + .error-message {
+    font-weight: normal; /* Peso da fonte normal */
+    display: block; /* Mostra a mensagem */
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 30px; /* Espaçamento acima do rodapé */
+    font-size: var(--footer-font-size); /* Tamanho da fonte */
+    color: var(--font-color); /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 1200px) {
+    main {
+        padding: 20px; /* Reduz o preenchimento interno */
+    }
+
+    header {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+
+    .input_field {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        height: 25px; /* Reduz a altura do campo */
+    }
+
+    .submit {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        padding: 8px; /* Reduz o preenchimento interno */
+    }
+
+    footer {
+        font-size: 10px; /* Reduz o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px; /* Reduz o preenchimento interno */
+    }
+
+    header {
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .input_field {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        height: 20px; /* Reduz a altura do campo */
+    }
+
+    .submit {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        padding: 6px; /* Reduz o preenchimento interno */
+    }
+
+    footer {
+        font-size: 9px; /* Reduz o tamanho da fonte */
+    }
+}

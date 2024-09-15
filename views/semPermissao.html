@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- Declara o tipo do documento como HTML5, indicando ao navegador que a página deve ser renderizada usando a versão mais recente do HTML -->
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil, o que pode ajudar com a renderização de caracteres e acessibilidade -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo que todos os caracteres especiais e acentos sejam exibidos corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala inicial e o tamanho da viewport para tornar a página responsiva em dispositivos móveis -->
+    <title>Erro Login</title> <!-- Define o título da página, que aparece na aba do navegador e ajuda a identificar a página -->
+    <link rel="stylesheet" href="/css/styleError.css"> <!-- Link para o arquivo CSS externo que estiliza a página de erro -->
+</head>
+<body>
+
+    <!-- Div principal que contém a mensagem de erro e o botão de ação -->
+    <div class="container">
+
+        <!-- Mensagem de erro exibida para o usuário, indicando que o acesso foi negado -->
+        <h3>Você não possui permissão.</h3>
+
+        <!-- Botão que permite ao usuário voltar para a página inicial -->
+        <button class="logout-button" onclick="logout()">Voltar</button>
+    </div>
+
+    <!-- Script JavaScript para definir a funcionalidade do botão -->
+    <script>
+        
+        // Função chamada quando o botão "Voltar" é clicado
+        function logout() {
+
+            // Redireciona o usuário para a página inicial
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
