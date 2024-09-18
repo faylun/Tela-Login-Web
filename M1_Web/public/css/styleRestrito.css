@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* Declaração de variáveis para cores e fontes */
+:root {
+    --font-color: #F5F5F5; /* Cor do texto principal */
+    --background-color: #121212; /* Cor de fundo da página */
+    --main-bg-color: #1E1E1E; /* Cor de fundo do container principal */
+    --border-color: #F5F5F5; /* Cor das bordas */
+    --focus-border-color: #FFFFFF; /* Cor da borda quando um campo está em foco */
+    --submit-bg-color: #490b75; /* Cor de fundo do botão de envio */
+    --submit-hover-bg-color: #7c10c9; /* Cor de fundo do botão ao passar o mouse */
+    --link-color: #b4b4b4; /* Cor dos links */
+    --footer-font-size: 11px; /* Tamanho da fonte do rodapé */
+    --header-font-color: #F5F5F5; /* Cor do texto do cabeçalho */
+    --default-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Fonte padrão */
+}
+
+/* Reset global de margens, preenchimentos e box-sizing */
+* {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura e altura totais */
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: var(--background-color); /* Cor de fundo */
+    font-family: var(--default-font); /* Fonte padrão */
+    height: 100vh; /* Altura da página igual à altura da janela de visualização */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    align-items: center; /* Alinha verticalmente no centro */
+    flex-direction: column; /* Organiza os itens em coluna */
+}
+
+/* Estilo do container principal */
+.container {
+    background-color: var(--main-bg-color); /* Cor de fundo do container */
+    padding: 20px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra ao redor do container */
+    width: 90%; /* Largura relativa ao contêiner pai */
+    max-width: 600px; /* Largura máxima */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Estilo do cabeçalho principal */
+h1 {
+    color: var(--header-font-color); /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+    font-size: 24px; /* Tamanho da fonte */
+}
+
+/* Estilo dos parágrafos */
+p {
+    color: var(--font-color); /* Cor do texto */
+    margin-bottom: 30px; /* Espaçamento abaixo do parágrafo */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+    font-size: var(--footer-font-size); /* Tamanho da fonte */
+    color: var(--font-color); /* Cor do texto */
+}
+
+/* Estilo dos botões de logout e envio */
+.logout-button, .submit {
+    width: 100%; /* Largura total dos botões */
+    max-width: 200px; /* Largura máxima */
+    padding: 10px; /* Preenchimento interno */
+    background-color: var(--submit-bg-color); /* Cor de fundo */
+    border: none; /* Sem borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: var(--font-color); /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 10px 0; /* Margem vertical entre os botões */
+}
+
+/* Estilo dos botões ao passar o mouse */
+.logout-button:hover, .submit:hover {
+    background-color: var(--submit-hover-bg-color); /* Cor de fundo ao passar o mouse */
+}
+
+/* Media Queries */
+
+/* Estilos para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px; /* Ajusta o preenchimento interno */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+
+    p {
+        font-size: 16px; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    .logout-button, .submit {
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+        padding: 12px; /* Ajusta o preenchimento interno dos botões */
+    }
+}
+
+/* Estilos para telas com largura máxima de 480px */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Ajusta o preenchimento interno */
+    }
+
+    h1 {
+        font-size: 18px; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+
+    p {
+        font-size: 14px; /* Reduz o tamanho da fonte dos parágrafos */
+    }
+
+    .logout-button, .submit {
+        font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+        padding: 10px; /* Ajusta o preenchimento interno dos botões */
+    }
+}
